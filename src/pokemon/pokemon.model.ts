@@ -1,14 +1,13 @@
 import * as mongoose from 'mongoose';
 
-export const pokemonSchema = new mongoose.Schema({
+export const PokemonSchema = new mongoose.Schema({
     name: { type: String, required: true},
     number: { type: Number, required: true},
-});
+}, {collection: 'season1'});
 
-export class Pokemon {
+export interface Pokemon extends mongoose.Document {
 
-    constructor(public name:string, public number:number){
-
-    };
-
+    id:string;
+    name: string;
+    number: number;
 }
