@@ -12,7 +12,7 @@ export class PokemonController{
 
     @Get('cheat')
     getAllPokemon(){
-        this.pokemonService.getAllPokemon()
+        return this.pokemonService.getAllPokemon()
     }
 
     @Get(':pokemonName')

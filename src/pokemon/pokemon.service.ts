@@ -20,9 +20,8 @@ constructor(@InjectModel('Pokemon') private pokemonModel:Model<Pokemon>){
     }
 
     async getAllPokemon(){
-        const result = await this.pokemonModel.find()
-        console.log("All pokemon")
-        console.log(result)
+        return await this.pokemonModel.find()
+        
     }
 
     async getSinglePokemon(pokemonName:string) {
